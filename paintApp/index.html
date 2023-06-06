@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Tempera</title>
+  </head>
+  <body>
+    <!-- ////// login page -->
+    <div class="container" id="loginPage">
+      <div class="login">
+        <h1>Welcome to Tempera</h1>
+        <figure id="login__img">
+          <img src="./img/paint-palette.png" width="200px" />
+        </figure>
+        <div class="login__form">
+          <p
+            class="hidden"
+            style="color: crimson; margin: 1rem 0"
+            id="login__logoutMsg"
+          >
+            You have been logged out
+          </p>
+          <input class="login__input" placeholder="username" id="username" />
+          <input
+            class="login__input"
+            type="password"
+            placeholder="password"
+            id="password"
+          />
+        </div>
+
+        <button class="login__btn" id="login__btn--login">login</button>
+        <button class="login__btn hidden" id="login__btn--signUp">
+          sign up
+        </button>
+        <div style="display: flex">
+          <p id="login__msg">dont have an account?</p>
+          <span
+            style="margin: 0 1rem; color: blue; cursor: pointer"
+            id="signUp__link"
+            >sign up</span
+          >
+          <span
+            style="margin: 0 1rem; color: blue; cursor: pointer"
+            id="login__link"
+            class="hidden"
+            >log in</span
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- ////////////// painting page -->
+    <div class="container hidden" id="paintingPage">
+      <div class="colors" style="display: flex; justify-content: space-between">
+        <div style="display: flex">
+          <div
+            style="background-color: blue"
+            class="colors__color"
+            data-color="blue"
+          ></div>
+          <div
+            style="background-color: black"
+            class="colors__color"
+            data-color="black"
+          ></div>
+          <div
+            style="background-color: red"
+            class="colors__color"
+            data-color="red"
+          ></div>
+          <div
+            style="background-color: yellow"
+            class="colors__color"
+            data-color="yellow"
+          ></div>
+
+          <button id="canvas__undo">undo</button>
+          <button id="canvas__clear">clear</button>
+        </div>
+
+        <ul class="canvas__icons">
+          <li class="canvas__icons--item">
+            <figure>
+              <img src="./img/send.png" width="25px" alt="chat" />
+            </figure>
+          </li>
+          <li class="canvas__icons--item">
+            <figure>
+              <img src="./img/gallery.png" width="25px" alt="chat" />
+            </figure>
+          </li>
+          <li class="canvas__icons--item">
+            <figure>
+              <img src="./img/user.png" width="25px" alt="chat" />
+            </figure>
+          </li>
+        </ul>
+
+        <div style="display: flex">
+          <span class="canvas__icons--item">
+            <figure id="canvas__signOut">
+              <img
+                src="./img/logout.png"
+                width="20px"
+                style="cursor: pointer"
+              />
+            </figure>
+          </span>
+          <div style="margin-right: 2rem">
+            <span id="welcomeMsg" style="display: block"></span>
+            <span id="userType"></span>
+          </div>
+        </div>
+      </div>
+
+      <canvas class="canvas"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

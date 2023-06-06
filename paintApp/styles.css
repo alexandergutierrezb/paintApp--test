@@ -1,0 +1,109 @@
+:root {
+  --main-color: #9b2226;
+  --secondary-color: #bb3e03;
+  --third-color: #e9d8a6;
+  --forth-color: #0a9396;
+  --fifth-color: #005f73;
+  --sixth-color: #001219;
+  /* ////////// */
+  --color-grey-light-1: #faf9f9;
+  --color-grey-light-2: #f0eeee;
+  --color-grey-light-3: #ccc;
+  --color-grey-light-4: #999;
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+}
+
+/* reusable classes */
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+.hidden {
+  display: none;
+}
+/* ///////////// login page */
+.login {
+  font-size: 1.6rem;
+  color: var(--color-grey-light-4);
+  max-width: 120rem;
+  box-shadow: var(--shadow-dark);
+  padding: 5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.login__input {
+  border: none;
+  padding: 0.5rem;
+  margin: 3rem 0;
+  border: none;
+  border-bottom: 1px solid black;
+}
+.login__btn {
+  padding: 0.5rem 1rem;
+  background-color: var(--forth-color);
+  color: white;
+  border: none;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+/* ///////////// painting page */
+#welcomeMsg {
+  color: #bb3e03;
+  font-size: 2rem;
+  font-family: "Courier New", Courier, monospace;
+}
+.colors {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+}
+.colors button {
+  display: block;
+  margin: 0 1rem;
+  padding: 1rem;
+  background-color: var(--fifth-color);
+  border-radius: 10%;
+  color: white;
+  cursor: pointer;
+}
+.colors__color {
+  max-width: 1.5rem;
+  padding: 2rem;
+  border-radius: 100%;
+  background-color: #0a9396;
+  margin: 0 1rem;
+  cursor: pointer;
+}
+.canvas {
+  box-shadow: var(--shadow-dark);
+}
+
+.canvas__icons {
+  list-style: none;
+  display: flex;
+}
+.canvas__icons--item {
+  margin: 0 2rem;
+  cursor: pointer;
+}
